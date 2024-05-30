@@ -1,4 +1,5 @@
 import 'package:auth/components/my_button.dart';
+import 'package:auth/components/square_tile.dart';
 import 'package:flutter/material.dart';
 
 import '../components/my_textfield.dart';
@@ -18,6 +19,7 @@ class AuthPage extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          const SizedBox(height: 50),
           Center(
             child: Icon(
               Icons.lock,
@@ -33,13 +35,13 @@ class AuthPage extends StatelessWidget {
               fontSize: 16,
             ),
           ),
-          const SizedBox(height: 50),
+          const SizedBox(height: 80),
           MyTextField(
             controller: userNameController,
             hintText: 'Username',
             obscureText: false,
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 20),
           MyTextField(
             controller: passwordController,
             hintText: 'Password',
@@ -59,7 +61,7 @@ class AuthPage extends StatelessWidget {
               ],
             ),
           ),
-          const SizedBox(height: 25),
+          const SizedBox(height: 45),
           MyButton(onTap: signInUser),
           const SizedBox(height: 50),
           Padding(
@@ -90,6 +92,30 @@ class AuthPage extends StatelessWidget {
               ],
             ),
           ),
+          const SizedBox(height: 50),
+          const Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SquareTile(imagePath: 'images/1.png'),
+              SizedBox(width: 25),
+              SquareTile(imagePath: 'images/2.png')
+            ],
+          ),
+          const SizedBox(height: 50),
+          const Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text('Not a member?'),
+              SizedBox(width: 4),
+              Text(
+                'Register now',
+                style: TextStyle(
+                  color: Colors.blue,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
+          )
         ],
       ),
     );
