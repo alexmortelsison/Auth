@@ -1,3 +1,4 @@
+import 'package:auth/components/my_button.dart';
 import 'package:flutter/material.dart';
 
 import '../components/my_textfield.dart';
@@ -7,6 +8,8 @@ class AuthPage extends StatelessWidget {
 
   final userNameController = TextEditingController();
   final passwordController = TextEditingController();
+
+  void signInUser() {}
 
   @override
   Widget build(BuildContext context) {
@@ -55,7 +58,38 @@ class AuthPage extends StatelessWidget {
                 ),
               ],
             ),
-          )
+          ),
+          const SizedBox(height: 25),
+          MyButton(onTap: signInUser),
+          const SizedBox(height: 50),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25),
+            child: Row(
+              children: [
+                Expanded(
+                  child: Divider(
+                    thickness: 0.5,
+                    color: Theme.of(context).colorScheme.inversePrimary,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  child: Text(
+                    'Or continue with',
+                    style: TextStyle(
+                      color: Theme.of(context).colorScheme.inversePrimary,
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Divider(
+                    thickness: 0.5,
+                    color: Theme.of(context).colorScheme.inversePrimary,
+                  ),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
