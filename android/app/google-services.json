@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "100387268238",
+    "project_id": "auth-2aff9",
+    "storage_bucket": "auth-2aff9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:100387268238:android:d361d8a81f2a3cd41a0bdf",
+        "android_client_info": {
+          "package_name": "com.alexsison.auth"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLknYDtMl80YqLtJyoOLTFlG3fztpcKUk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
