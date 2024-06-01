@@ -1,8 +1,8 @@
+import 'package:auth/pages/auth_page.dart';
 import 'package:auth/themes/light_mode.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
-import 'pages/log_in.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: lightMode,
       debugShowCheckedModeBanner: false,
-      home: LogInPage(),
+      home: const AuthPage(),
     );
   }
 }
