@@ -1,9 +1,8 @@
 import 'package:auth/components/my_button.dart';
 import 'package:auth/components/square_tile.dart';
+import 'package:auth/services/auth_service.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-
 import '../components/my_textfield.dart';
 
 class RegisterPage extends StatefulWidget {
@@ -134,12 +133,18 @@ class _RegisterPageState extends State<RegisterPage> {
               ),
             ),
             const SizedBox(height: 50),
-            const Row(
+            Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SquareTile(imagePath: 'images/1.png'),
-                SizedBox(width: 25),
-                SquareTile(imagePath: 'images/2.png')
+                SquareTile(
+                  imagePath: 'images/1.png',
+                  onTap: () => AuthService().signInWithGoogle(),
+                ),
+                const SizedBox(width: 25),
+                SquareTile(
+                  imagePath: 'images/2.png',
+                  onTap: () {},
+                )
               ],
             ),
             const SizedBox(height: 50),
