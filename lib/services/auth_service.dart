@@ -8,10 +8,10 @@ class AuthService {
     final GoogleSignInAuthentication gAuth = await gUser!.authentication;
 
     final credential = GoogleAuthProvider.credential(
-      accessToken: gAuth.accessToken,
       idToken: gAuth.idToken,
+      accessToken: gAuth.accessToken,
     );
 
-    return await FirebaseAuth.instance.signInWithCredential(credential);
+    return FirebaseAuth.instance.signInWithCredential(credential);
   }
 }
